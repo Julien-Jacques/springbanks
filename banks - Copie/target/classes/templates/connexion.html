@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion</title>
+</head>
+<body>
+<h1>Connexion</h1>
+<form action="/client/connexion" method="POST">
+    <label for="nom">Nom:</label><br>
+    <input type="text" id="nom" name="nom" required><br>
+    <label for="motDePasse">Mot de passe:</label><br>
+    <input type="password" id="motDePasse" name="motDePasse" required><br><br>
+    <button type="submit">Se connecter</button>
+</form>
+<p th:text="${erreur}" style="color: red"></p>
+<hr>
+<h2>Créer un Compte Client</h2>
+<form action="/client/creer-compte" method="POST">
+    <label for="nomNouveau">Nom:</label><br>
+    <input type="text" id="nomNouveau" name="nomNouveau" required><br>
+    <label for="motDePasseNouveau">Mot de passe:</label><br>
+    <input type="password" id="motDePasseNouveau" name="motDePasseNouveau" required><br><br>
+    <button type="submit">Créer Compte</button>
+</form>
+</body>
+</html>
